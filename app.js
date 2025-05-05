@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Menu Toggle
+    
     const menuBtn = document.querySelector('.menu-btn');
     const nav = document.querySelector('.nav');
     
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         nav.classList.toggle('active');
     });
     
-    // Close mobile menu when clicking on a link
+    
     const navLinks = document.querySelectorAll('.nav ul li a');
     navLinks.forEach(link => {
         link.addEventListener('click', function() {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Header scroll effect
+    
     const header = document.querySelector('.header');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 100) {
@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Back to top button
+  
     const backToTop = document.querySelector('.back-to-top');
     window.addEventListener('scroll', function() {
         if (window.scrollY > 300) {
@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Smooth scrolling for all links
+    
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
@@ -55,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Animate elements when scrolling
     const animateOnScroll = function() {
         const elements = document.querySelectorAll('.service-card, .trainer-card, .pricing-card, .testimonial-card');
         
@@ -70,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
     
-    // Set initial state for animated elements
+    
     const animatedElements = document.querySelectorAll('.service-card, .trainer-card, .pricing-card, .testimonial-card');
     animatedElements.forEach(element => {
         element.style.opacity = '0';
@@ -79,9 +78,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     window.addEventListener('scroll', animateOnScroll);
-    animateOnScroll(); // Run once on page load
+    animateOnScroll();d
     
-    // Simple slider for testimonials and trainers
+   
     let currentSlide = 0;
     const slides = document.querySelectorAll('.trainer-card, .testimonial-card');
     const totalSlides = slides.length;
@@ -97,26 +96,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-    // Auto slide
+    
     setInterval(() => {
         currentSlide++;
         showSlide(currentSlide);
     }, 5000);
     
-    // Form submission
+    
     const forms = document.querySelectorAll('form');
     forms.forEach(form => {
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            // Here you would typically send the form data to a server
-            // For this example, we'll just show an alert
+            
             alert('Obrigado por sua mensagem! Entraremos em contato em breve.');
             form.reset();
         });
     });
-    
-    // Newsletter form
+
     const newsletterForm = document.querySelector('.newsletter-form');
     if (newsletterForm) {
         newsletterForm.addEventListener('submit', function(e) {
